@@ -1,0 +1,39 @@
+<?php
+namespace {{ namespace }};
+
+use Probe\Env\Contracts\EnvBlueprint as Contract;
+use Probe\Env\Traits\LoadFromDotEnvInstance;
+use Probe\Env\Traits\ParseRules;
+
+/** https://focalframework.com/docs/stubs/ */
+enum {{ name }}:string implements Contract{
+    use ParseRules, LoadFromDotEnvInstance;
+
+    /**
+     * STRUCTURE: case {ALIAS} = {ACTUAL NAME};
+     * EXAMPLE: case VARIABLE = "IMPORTANT_VAR";
+     */
+
+
+    public function rules(): ?string{
+        return match($this){
+            /* ---- EXAMPLE ---- */
+            /** 
+             * 
+             * self::VARIABLE => "required|boolean|default:true", 
+             **/
+
+            /* ---- RULES ---- */
+            /**
+             * - required
+             * - default:value || default:[value1,value2,value3 ...]
+             * - values:[val1,val2,val3 ...]
+             * - type:bool || type:int + Any valid type accepted by Dotenv\Dotenv
+             **/
+
+            // Return nothing for any variables that don't have any requirements / rules.
+            default => null,
+        };
+    }
+
+}
