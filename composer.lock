@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fbee80a4396add691f894f76f8750989",
+    "content-hash": "e56b73c0fd776c79c1ed92ea62b4d3ec",
     "packages": [
         {
             "name": "carbonphp/carbon-doctrine-types",
@@ -495,16 +495,16 @@
         },
         {
             "name": "probe/support",
-            "version": "v1.1.6",
+            "version": "v1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/probe-components/Support.git",
-                "reference": "749ad6ffc9fd70b561d7ad8cd719a3e4e89121c0"
+                "reference": "fce087003c993c048c977264a3558cf3d4040dad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/probe-components/Support/zipball/749ad6ffc9fd70b561d7ad8cd719a3e4e89121c0",
-                "reference": "749ad6ffc9fd70b561d7ad8cd719a3e4e89121c0",
+                "url": "https://api.github.com/repos/probe-components/Support/zipball/fce087003c993c048c977264a3558cf3d4040dad",
+                "reference": "fce087003c993c048c977264a3558cf3d4040dad",
                 "shasum": ""
             },
             "require": {
@@ -518,6 +518,8 @@
                     "./helpers.php"
                 ],
                 "psr-4": {
+                    "Probe\\Auth\\": "Auth/",
+                    "Probe\\Routing\\": "Routing/",
                     "Probe\\Support\\": "./"
                 }
             },
@@ -534,9 +536,9 @@
             "description": "All of the Support components for the Focal PHP Framework",
             "support": {
                 "issues": "https://github.com/probe-components/Support/issues",
-                "source": "https://github.com/probe-components/Support/tree/v1.1.6"
+                "source": "https://github.com/probe-components/Support/tree/v1.2"
             },
-            "time": "2026-03-12T16:04:14+00:00"
+            "time": "2026-03-16T03:41:02+00:00"
         },
         {
             "name": "psr/clock",

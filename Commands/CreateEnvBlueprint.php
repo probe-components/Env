@@ -27,8 +27,8 @@ abstract class CreateEnvBlueprint{
         }
         $filePath = $destinationDir . $fullFileName;
         // The blueprint file that is used to generate the template
-        $envTemplate = Stub::getPath(Stub::ENV_BLUEPRINT);
-    
+        $envTemplate = __DIR__ . "/../stubs/" . Stub::ENV_BLUEPRINT;
+
         if (file_exists($filePath)){
             echo "{$filePath} already exists";
             exit;
@@ -51,7 +51,7 @@ abstract class CreateEnvBlueprint{
         fclose(stream: $file);
     
         if (file_exists($filePath)){
-            echo "Template generated: {$filePath}";
+            echo "Blueprint generated: {$filePath}";
         }else{
             echo "Generation Failed, Please make sure you have sufficient permissions in: {$destinationDir}";
             exit;
